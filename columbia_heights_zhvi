@@ -1,0 +1,32 @@
+import plotly.plotly as py
+from plotly.graph_objs import *
+
+from datetime import datetime
+
+x = [
+    datetime(year=2000, month=01, day=01),
+    datetime(year=2001, month=01, day=01),
+    datetime(year=2002, month=01, day=01),
+    datetime(year=2003, month=01, day=01),
+    datetime(year=2004, month=01, day=01),
+    datetime(year=2005, month=01, day=01),
+    datetime(year=2006, month=01, day=01),
+    datetime(year=2007, month=01, day=01),
+    datetime(year=2008, month=01, day=01),
+    datetime(year=2009, month=01, day=01),
+    datetime(year=2010, month=01, day=01),
+    datetime(year=2011, month=01, day=01),
+    datetime(year=2012, month=01, day=01),
+    datetime(year=2013, month=01, day=01),
+    datetime(year=2014, month=01, day=01),
+    datetime(year=2015, month=01, day=01)
+]
+
+data = Data([
+    Scatter(
+        x=x,
+        y=[137800, 149600, 155100, 206500, 257100, 354400, 414800, 432100, 421500, 372200, 357300,
+352800, 391500, 461600, 526400, 559100]
+    )
+])
+plot_url = py.plot(data, filename='columbia_heights_median_home_value')    
